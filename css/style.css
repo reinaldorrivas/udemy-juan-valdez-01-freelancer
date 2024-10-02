@@ -1,4 +1,4 @@
-html:root {
+:root {
   --blanco: #fff;
   --gris: #757575;
   --oscuro: #212121;
@@ -7,19 +7,55 @@ html:root {
 }
 
 html {
-  font-size: 62.5px;
+  font-size: 62.5%;
 }
 
 body {
   font-size: 16px;
-  font-family: "Krub", sans-serif;
+  font-family: 'Krub', sans-serif;
 }
 
-.titulo {
+a {
+  text-decoration: none;
+  color: var(--oscuro);
+}
+
+.contenedor {
+  background-color: var(--secundario);
+}
+
+.main-header .titulo {
   text-align: center;
   font-size: 3.8rem;
 }
 
-.titulo span {
+.main-header .titulo span {
   font-size: 2rem;
+}
+
+.main-header .navegacion-principal {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+}
+
+@media (min-width: 768px) {
+  .main-header .navegacion-principal {
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+
+.main-header .navegacion-principal a {
+  flex: 1 1 0;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: var(--blanco);
+  font-weight: 600;
+  transition: all ease 200ms;
+}
+
+.main-header .navegacion-principal a:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
 }
