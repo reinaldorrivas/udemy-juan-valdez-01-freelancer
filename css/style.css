@@ -4,21 +4,53 @@
   --oscuro: #212121;
   --primario: #ffc107;
   --secundario: #0097a7;
+  --grisClaro: #dfe9f3;
 }
+
+/*
+ * GLOBALES
+ */
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
-  font-size: 16px;
+  font-size: 16px; /* 1rem = 10px */
   font-family: 'Krub', sans-serif;
+  background-image: linear-gradient(to bottom, var(--blanco), var(--grisClaro));
 }
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2,
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+/*
+ * CLASES UTILITARIAS
+ */
 
 a {
   text-decoration: none;
@@ -26,28 +58,54 @@ a {
 }
 
 .contenedor {
-  background-color: var(--secundario);
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.main-header .titulo {
-  text-align: center;
-  font-size: 3.8rem;
+@media (min-width: 768px) {
+  .contenedor {
+    margin: auto;
+  }
 }
+
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    width: auto;
+  }
+}
+
+/*
+ * MAIN HEADER
+ */
 
 .main-header .titulo span {
   font-size: 2rem;
 }
 
+.main-header .color-fondo-navegacion {
+  background-color: var(--secundario);
+}
+
 .main-header .navegacion-principal {
   display: flex;
   flex-direction: column;
-  max-width: 1280px;
 }
 
 @media (min-width: 768px) {
   .main-header .navegacion-principal {
     flex-direction: row;
-    margin: 0 auto;
   }
 }
 
@@ -63,4 +121,44 @@ a {
 .main-header .navegacion-principal a:hover {
   background-color: var(--primario);
   color: var(--oscuro);
+}
+
+.main-header .hero {
+  background: var(--oscuro) url('../img/hero.jpg') center center / cover
+    no-repeat;
+  height: 450px;
+}
+
+.main-header .hero .contenido-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  color: var(--blanco);
+}
+
+.main-header .hero .contenido-hero div {
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+.main-header .hero .contenido-hero div p {
+  margin: 0;
+}
+
+/*
+ * CONTENEDOR PRINCIPAL
+ */
+
+.contenedor-principal {
+  background-color: var(--blanco);
+  border-radius: 1rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  box-shadow: 0 5px 15px 0 rgba(112, 112, 112, 0.50);
 }
