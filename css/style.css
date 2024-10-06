@@ -73,6 +73,7 @@ a {
   color: var(--blanco);
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 600;
   padding: 1rem 3rem;
   margin-top: 2rem;
@@ -87,7 +88,7 @@ a {
 }
 
 /*
- * MAIN HEADER
+ * ENCABEZADO PRINCIPAL
  */
 
 .main-header .titulo span {
@@ -97,6 +98,8 @@ a {
 .main-header .color-fondo-navegacion {
   background-color: var(--secundario);
 }
+
+/* NAVEGACIÓN PRINCIPAL */
 
 .main-header .navegacion-principal {
   display: flex;
@@ -123,6 +126,8 @@ a {
   color: var(--oscuro);
 }
 
+/* SECCIÓN HERO BANNER */
+
 .main-header .hero {
   background: var(--oscuro) url('../img/hero.jpg') center center / cover
     no-repeat;
@@ -141,14 +146,22 @@ a {
   color: var(--blanco);
 }
 
-.main-header .hero .contenido-hero div {
+.main-header .hero .contenido-hero .contenedor-ubicacion {
   display: flex;
   align-items: end;
   gap: 0.5rem;
 }
 
-.main-header .hero .contenido-hero div p {
+
+.main-header .hero .contenido-hero .contenedor-ubicacion p {
   margin: 0;
+}
+
+.main-header .hero .contenido-hero .contenedor-boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /*
@@ -160,5 +173,42 @@ a {
   border-radius: 1rem;
   margin-top: 2rem;
   padding: 2rem;
-  box-shadow: 0 5px 15px 0 rgba(112, 112, 112, 0.50);
+  box-shadow: 0 5px 15px 0 rgba(112, 112, 112, 0.5);
+}
+
+/* CONTENEDOR SERVICIOS */
+
+@media (min-width: 768px) {
+  .contenedor-principal .servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.contenedor-principal .servicios section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-principal .servicios section h4 {
+  color: var(--secundario);
+  font-weight: 400;
+}
+
+.contenedor-principal .servicios section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--primario);
+}
+
+.contenedor-principal .servicios section p {
+  text-align: center;
+  line-height: 2;
 }
