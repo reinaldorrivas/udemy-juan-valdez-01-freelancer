@@ -62,9 +62,7 @@
             </svg>
             <p>Caracas, Venezuela</p>
           </div>
-          <div class="contenedor-boton">
             <a class="boton" href="#">Contactar</a>
-          </div>
         </div>
       </section>
     </header>
@@ -190,41 +188,54 @@
         </div>
       </section>
 
-      <section>
+      <section class="contacto">
         <h3>Contacto</h3>
 
-        <form action="javascript:void(0);">
+        <form class="formulario-contacto" action="javascript:void(0);">
           <fieldset>
             <legend>Contáctanos llenando todos los campos</legend>
-            <div>
-              <div>
+            <div class="campos">
+              <div class="campo">
                 <label for="name">Nombre:</label>
-                <input type="text" name="name" id="name" placeholder="Nombre" />
+                <input
+                  class="input"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nombre"
+                />
               </div>
 
-              <div>
+              <div class="campo">
                 <label for="phone">Teléfono:</label>
                 <input
+                  class="input"
                   type="tel"
                   name="phone"
                   id="phone"
                   placeholder="Teléfono"
                 />
               </div>
+
+              <div class="campo">
+                <label for="email">Email:</label>
+                <input
+                  class="input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="campo">
+                <label for="message">Mensaje:</label>
+                <textarea class="input input-textarea" name="message" id="message" placeholder="Escribe tu mensaje"></textarea>
+              </div>
             </div>
 
-            <div>
-              <label for="email">Email:</label>
-              <input type="email" name="email" id="email" placeholder="Email" />
-            </div>
-
-            <div>
-              <label for="message">Mensaje:</label>
-              <textarea name="message" id="message"></textarea>
-            </div>
-
-            <div>
-              <input type="submit" value="Enviar" />
+            <div class="contenedor-boton flex justify-left mt-3">
+              <input class="boton w-sm-100 mt-0" type="submit" value="Enviar" />
             </div>
           </fieldset>
         </form>
