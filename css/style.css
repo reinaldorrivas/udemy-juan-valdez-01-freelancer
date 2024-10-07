@@ -65,13 +65,13 @@ a {
  */
 
 .contenedor {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .contenedor {
-    margin: auto;
+    margin: 0 auto;
+    width: 67.474960%
   }
 }
 
