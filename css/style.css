@@ -14,6 +14,13 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+
+@media (min-width: 480px) {
+  html {
+    scroll-snap-type: none;
+  }
 }
 
 *,
@@ -119,6 +126,18 @@ a {
  * ENCABEZADO PRINCIPAL
  */
 
+.main-header {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+@media (min-width: 480px) {
+  .main-header {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+}
+
 .main-header .titulo span {
   font-size: 2rem;
 }
@@ -198,11 +217,18 @@ a {
 
 /* CONTENEDOR SERVICIOS */
 
+.servicios {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
 @media (min-width: 768px) {
   .servicios {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
   }
 }
 
@@ -244,12 +270,16 @@ a {
   border-radius: 1rem;
   padding: 2rem;
   width: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 @media (min-width: 768px) {
   .formulario-contacto {
     width: 50%;
     margin: 0 auto;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
   }
 }
 
