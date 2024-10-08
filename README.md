@@ -1,4 +1,4 @@
-# 02-juan-valdez-frontend-store
+# 01-juan-valdez-freelancer
 
 This is a layout practice for a CSS Introduction:
 
